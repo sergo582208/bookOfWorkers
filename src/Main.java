@@ -1,8 +1,9 @@
 import java.util.Arrays;
 
 public class Main {
+    static Employee[] employees = new Employee[10];
     public static void main(String[] args) {
-        Employee[] employees = new Employee[10];
+
         for (int i = 0; i < employees.length; i++) {
             employees[i] = new Employee("Андей Викторович Пресняков " + i, 1 + (i % 5), 25000 * (i + 1));
         }
@@ -19,7 +20,9 @@ public class Main {
     }
 
     private static void printEmployees(Employee[] employees) {
-        for (Employee employee : employees) System.out.println(employee);
+        for (Employee employee : employees) {
+            System.out.println(employee);
+        }
 
     }
 
