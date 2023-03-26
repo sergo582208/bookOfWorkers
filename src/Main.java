@@ -8,7 +8,7 @@ public class Main {
             employees[i] = new Employee("Андей Викторович Пресняков " + i, 1 + (i % 5), 25000 * (i + 1));
         }
         System.out.println("Наши сотрудники : ");
-        printEmployees(employees);
+        printEmployees();
         System.out.println("b. Итоговая сумма затрат на зарплаты " + calculateTotalSalary(employees));
         System.out.println("c. Сотрудник с минимальной зарплатой " + getEmployeeWithMinSalary(employees));
         System.out.println("d. Сотрудник с максимальной зарплатой " + getEmployeeWithMaxSalary(employees));
@@ -19,7 +19,7 @@ public class Main {
 
     }
 
-    private static void printEmployees(Employee[] employees) {
+    private static void printEmployees() {
         for (Employee employee : employees) {
             System.out.println(employee);
         }
