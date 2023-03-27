@@ -9,12 +9,12 @@ public class Main {
         }
         System.out.println("Наши сотрудники : ");
         printEmployees();
-        System.out.println("b. Итоговая сумма затрат на зарплаты " + calculateTotalSalary(employees));
-        System.out.println("c. Сотрудник с минимальной зарплатой " + getEmployeeWithMinSalary(employees));
-        System.out.println("d. Сотрудник с максимальной зарплатой " + getEmployeeWithMaxSalary(employees));
-        System.out.println("e. Среднее значение зарпалат " + calculateAverageSalary(employees));
+        System.out.println("b. Итоговая сумма затрат на зарплаты " + calculateTotalSalary());
+        System.out.println("c. Сотрудник с минимальной зарплатой " + getEmployeeWithMinSalary());
+        System.out.println("d. Сотрудник с максимальной зарплатой " + getEmployeeWithMaxSalary());
+        System.out.println("e. Среднее значение зарпалат " + calculateAverageSalary());
         System.out.println("g. ФИО всех сотрудников ");
-        printFullNameEmployees(employees);
+        printFullNameEmployees();
 
 
     }
@@ -26,7 +26,7 @@ public class Main {
 
     }
 
-    private static int calculateTotalSalary(Employee[] employees) {
+    private static int calculateTotalSalary() {
         int totalSalary = 0;
         for (Employee employee : employees) {
             totalSalary += employee.getSalary();
@@ -34,7 +34,7 @@ public class Main {
         return totalSalary;
     }
 
-    private static Employee getEmployeeWithMinSalary(Employee[] employees) {
+    private static Employee getEmployeeWithMinSalary() {
         Employee result = employees[0];
         for (Employee employee : employees) {
             if (result.getSalary() < employee.getSalary()) {
@@ -44,7 +44,7 @@ public class Main {
         return result;
     }
 
-    private static Employee getEmployeeWithMaxSalary(Employee[] employees) {
+    private static Employee getEmployeeWithMaxSalary() {
         Employee result = employees[0];
         for (Employee employee : employees) {
             if (result.getSalary() < result.getSalary()) {
@@ -54,12 +54,12 @@ public class Main {
         return result;
     }
 
-    private static int calculateAverageSalary(Employee[] employees) {
-        int totalSalary = calculateTotalSalary(employees);
+    private static int calculateAverageSalary() {
+        int totalSalary = calculateTotalSalary();
         return totalSalary / employees.length;
     }
 
-    private static void printFullNameEmployees(Employee[] employees) {
+    private static void printFullNameEmployees() {
         for (Employee employee : employees) System.out.println(employee);
     }
 }
